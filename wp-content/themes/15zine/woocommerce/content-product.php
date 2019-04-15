@@ -17,67 +17,67 @@
  */
 
 
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
 }
 
 global $product;
 
 // Ensure visibility
-if (!$product || !$product->is_visible()) {
-    return;
+if ( ! $product || ! $product->is_visible() ) {
+	return;
 }
 
 
 // Extra post classes
 $classes = array('cb-meta-style-2', 'cb-woo-loop');
 ?>
-<li <?php post_class($classes); ?>>
+<li <?php post_class( $classes ); ?>>
 
-    <?php do_action('woocommerce_before_shop_loop_item'); ?>
+	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
-    <div class="cb-mask">
+		<div class="cb-mask">
 
-        <?php
-        /**
-         * woocommerce_before_shop_loop_item_title hook
-         *
-         * @hooked woocommerce_show_product_loop_sale_flash - 10
-         * @hooked woocommerce_template_loop_product_thumbnail - 10
-         */
-        do_action('woocommerce_before_shop_loop_item_title');
-        ?>
-        <div class="cb-article-meta">
-            <?php
+			<?php
+				/**
+				 * woocommerce_before_shop_loop_item_title hook
+				 *
+				 * @hooked woocommerce_show_product_loop_sale_flash - 10
+				 * @hooked woocommerce_template_loop_product_thumbnail - 10
+				 */
+				do_action( 'woocommerce_before_shop_loop_item_title' );
+			?>
+			<div class="cb-article-meta">
+				<?php
 
-            /**
-             * woocommerce_after_shop_loop_item hook
-             *
-             * @hooked woocommerce_template_loop_add_to_cart - 10
-             */
-            do_action('woocommerce_after_shop_loop_item');
+					/**
+					 * woocommerce_after_shop_loop_item hook
+					 *
+					 * @hooked woocommerce_template_loop_add_to_cart - 10
+					 */
+					do_action( 'woocommerce_after_shop_loop_item' ); 
 
-            ?>
+				?>
 
-            <a href="<?php the_permalink(); ?>" class="cb-view-button button"><?php _e('View Details', 'cubell'); ?></a>
-        </div>
+				<a href="<?php the_permalink(); ?>" class="cb-view-button button"><?php _e('View Details', 'cubell'); ?></a>
+			</div>
 
-    </div>
-    <div class="cb-meta">
+		</div>
+		<div class="cb-meta">
 
-        <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+			<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 
-        <?php
-        /**
-         * woocommerce_after_shop_loop_item_title hook
-         *
-         * @hooked woocommerce_template_loop_rating - 5
-         * @hooked woocommerce_template_loop_price - 10
-         */
-        do_action('woocommerce_after_shop_loop_item_title');
-        ?>
+			<?php
+				/**
+				 * woocommerce_after_shop_loop_item_title hook
+				 *
+				 * @hooked woocommerce_template_loop_rating - 5
+				 * @hooked woocommerce_template_loop_price - 10
+				 */
+				do_action( 'woocommerce_after_shop_loop_item_title' );
+			?>
 
-    </div>
+		</div>
 
 
 </li>

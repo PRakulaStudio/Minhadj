@@ -14,8 +14,6 @@
   "require": {
   },
   "autoload": {
-    "files": [
-      "ot-loader.php"
-    ]
+    "files": ["ot-loader.php"]
   }
 }

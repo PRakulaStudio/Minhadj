@@ -1,7 +1,4 @@
-.cb-select-sol {
-    display: none;
-}
-
+.cb-select-sol { display: none; }
 @-moz-keyframes blinker {
     0% {
         opacity: 1.0;
@@ -43,11 +40,7 @@
     margin: 0;
     padding: 0;
 }
-
-.sol-container {
-    max-width: 300px;
-}
-
+.sol-container {     max-width: 300px; }
 .sol-inner-container {
     position: relative;
     height: 30px;
